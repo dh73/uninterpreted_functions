@@ -1,0 +1,17 @@
+[tasks]
+cover
+prove
+
+[options]
+prove: mode prove
+cover: mode cover
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal partial_uf_alu.sv
+prep -top partial_uf_alu
+
+[files]
+partial_uf_alu.sv
