@@ -1,0 +1,17 @@
+[tasks]
+cover
+prove
+
+[options]
+cover: mode cover
+prove: mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal congruence.sv
+prep -top congruence
+
+[files]
+congruence.sv
